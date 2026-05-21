@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+@theme {
+  --font-sans: "Arial", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Arial", sans-serif;
+  --font-mono: "Arial", monospace;
+  --color-accent: #ccff00;
+  --color-dark-bg: #09090a;
+  --color-dark-card: #121214;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-zinc-100 antialiased;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+  }
+  .text-stroke:hover {
+    -webkit-text-stroke: 1px #ccff00;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
